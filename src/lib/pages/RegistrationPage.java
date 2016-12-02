@@ -4,9 +4,11 @@ package lib.pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class RegistrationPage extends Page{
 
@@ -45,7 +47,47 @@ public class RegistrationPage extends Page{
 	@FindBy(xpath = "id('pie_registered')/li[3]/div/div/input[3]")
 	private WebElement hobbyCricket;
 	
+	@FindBy(id = "dropdown_7")
+	private WebElement selectCountry;
 
+	@FindBy(id="mm_date_8")
+	private WebElement selectMonth;
+	
+	@FindBy(id="dd_date_8")
+	private WebElement selectDay;
+	
+	@FindBy(id="yy_date_8")
+	private WebElement selectYear;
+	
+	@FindBy(xpath = "id('pie_register')/li[14]/div/input")
+	private WebElement submitButton;
+	
+	@FindBy(xpath = "id('post-49')/div/p")
+	private WebElement successRegistrationMsg;
+	
+	public void selectCountry(String country){
+		Select select = new Select(selectCountry);
+		select.selectByValue(country);
+	}
+	
+	public void selectMonth(String month){
+		Select select = new Select(selectMonth);
+		select.selectByValue(month);
+	}
+	
+	public void selectDay(String day){
+		Select select = new Select(selectDay);
+		select.selectByValue(day);
+	}
+	
+	public void selectYear(String year){
+		Select select = new Select(selectYear);
+		select.selectByValue(year);
+	}
+	
+	public void clickOnSubmitButton(){
+		submitButton.click();
+	}
 
 	public void selectMaritalStatus(String maritalStatus) {
 		List<WebElement> listOfInputs = driver.findElements(By.xpath("id('pie_registered')/li[2]/div/div/input"));
@@ -58,7 +100,6 @@ public class RegistrationPage extends Page{
 		else {
 			listOfInputs.get(2).click();
 		}
-		
 	}
 
 	
@@ -92,18 +133,31 @@ public class RegistrationPage extends Page{
 	}
 	
 	
-	public void checkHobbyDancing(){
-		hobbyDancing.click();
+	public void checkHobbyDancing(boolean bValue){
+		if(bValue != hobbyDancing.isSelected()){
+			hobbyDancing.click();
+		}
 	}
 	
-	public void checkHobbyReading(){
-		hobbyReading.click();
+	public void checkHobbyReading(boolean bValue){
+		if(bValue != hobbyReading.isSelected()){
+			hobbyReading.click();
+		}
 	}
 	
-	public void checkHobbyCricket(){
-		hobbyCricket.click();
+	public void checkHobbyCricket(boolean bValue){
+		if(bValue != hobbyCricket.isSelected()){
+			hobbyCricket.click();
+		}
 	}
 		
+	public boolean isDisplayedSuccessRegistrationMsg(){
+		try {
+			return successRegistrationMsg.isDisplayed();
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+	}
 	
 	public RegistrationPage(WebDriver driver) {
 		super(driver);

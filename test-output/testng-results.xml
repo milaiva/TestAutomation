@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7817" started-at="2016-11-25T14:15:58Z" finished-at="2016-11-25T14:16:06Z">
+  <suite name="Default suite" duration-ms="8466" started-at="2016-12-02T14:57:39Z" finished-at="2016-12-02T14:57:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7817" started-at="2016-11-25T14:15:58Z" finished-at="2016-11-25T14:16:06Z">
-      <class name="test.TestDrugi">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.TestDrugi@1efbd816]" name="setUp" is-config="true" duration-ms="4527" started-at="2016-11-25T15:15:58Z" finished-at="2016-11-25T15:16:03Z">
+    <test name="Default test" duration-ms="8466" started-at="2016-12-02T14:57:39Z" finished-at="2016-12-02T14:57:47Z">
+      <class name="test.TestRegistration">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.TestRegistration@1efbd816]" name="setUp" is-config="true" duration-ms="4892" started-at="2016-12-02T15:57:39Z" finished-at="2016-12-02T15:57:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="test()[pri:0, instance:test.TestDrugi@1efbd816]" name="test" duration-ms="3274" started-at="2016-11-25T15:16:03Z" finished-at="2016-11-25T15:16:06Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:test.TestRegistration@1efbd816]" name="test" duration-ms="3476" started-at="2016-12-02T15:57:44Z" finished-at="2016-12-02T15:57:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.TestDrugi@1efbd816]" name="afterClass" is-config="true" duration-ms="10" started-at="2016-11-25T15:16:06Z" finished-at="2016-11-25T15:16:06Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.TestRegistration@1efbd816]" name="afterClass" is-config="true" duration-ms="81" started-at="2016-12-02T15:57:47Z" finished-at="2016-12-02T15:57:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.TestDrugi -->
+      </class> <!-- test.TestRegistration -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
